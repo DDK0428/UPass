@@ -1,0 +1,36 @@
+{% extends "Base_layout.html" %}
+{% block title %}Upass - A Secure Password Manager{% endblock %}
+
+{% block content %}
+<body>
+    <div class="row">
+        <form method="post" action="/">
+            {% if current_user.is_authenticated%}
+                <input class="button2" type="submit" value="Log Out" name="logout" />
+            {% else %}
+                <input class="button2" type="submit" value="Register" name="register" />
+                <input class="button1" type="submit" value="Log In" name="login"/>
+            {% endif %}
+        </form>
+    </div>
+    <div class="text-white">
+        <div class="row">
+            <p class="para col-5">Upass is a secure password manager that helps you to store password without any hesitation.
+            This password manager is developed by 'Dulina Kasthuri' as the final year project of his degree in Cybersecurity and
+            Digital Forensics.</p>
+            <div>
+                <form method="post" action="/">
+                    {% if current_user.is_authenticated %}
+                        <input class="button3 image2" type="submit" value="Go to Account" name="account" />
+                    {% else %}
+                        <input class="button3 image2" type="submit" value="Get Started >" name="get_started"/>
+                    {% endif %}
+                </form>
+            </div>
+        </div>
+        <div class="image">
+            <img src="{{url_for('static', filename='logo1.png')}}" alt="Image" height="106px" width="201px">
+        </div>
+    </div>
+</body>
+{% endblock %}

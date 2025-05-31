@@ -1,0 +1,47 @@
+{% extends "Base_layout.html" %}
+{% block title %}{{ current_user.first_name }} - Add Password{% endblock %}
+
+{% block content %}
+<body class="body1">
+<div class="center">
+    <a href="{{url_for('users.account')}}"><img src="{{url_for('static', filename='logo1.png')}}" alt="Image" height="106px" width="201px"></a>
+</div>
+<div class="card rounded-pill col-10 center">
+    <form method="POST" action="">
+    {{ form.hidden_tag() }}
+    <div class="row align-middle">
+        <div class="card-body col-2">
+            {{ form.master_password(class='form-control rounded-pill', placeholder="Master Password") }}
+        </div>
+        <div class="card-body col-2">
+            {{ form.appname(class='form-control rounded-pill', placeholder="App Name") }}
+        </div>
+        <div class="card-body col-2">
+            {{ form.uname(class='form-control rounded-pill', placeholder="Username/Email") }}
+        </div>
+        <div class="card-body col-2">
+            {{ form.password(class='form-control rounded-pill', placeholder="Password") }}
+        </div>
+        <div class="card-body col-1">
+            <button type="button" class="button5" id="togglePassword">Show/Hide</button>
+        </div>
+        <div class="card-body col-1">
+            {{ form.submit(class="button5") }}
+        </div>
+    </div>
+    </form>
+</div>
+
+<script>
+        const togglePassword = document
+            .querySelector('#togglePassword');
+        const password = document.querySelector('#password');
+        togglePassword.addEventListener('click', () => {
+            const type = password
+                .getAttribute('type') === 'password' ?
+                'text' : 'password';
+            password.setAttribute('type', type);
+        });
+</script>
+</body>
+{% endblock %}

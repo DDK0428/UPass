@@ -1,0 +1,45 @@
+{% extends "Base_layout.html" %}
+{% block title %}Welcome to UPass{% endblock %}
+
+{% block content %}
+<body class="body1">
+    <div class="center">
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group center">
+                <legend  class="home_image2"><a href="{{url_for('main.home')}}"><img src="{{url_for('static', filename='logo1.png')}}" alt="Image" height="106px" width="201px"></a> </legend>
+                <div class="row">
+                    <div class="col">
+                        {{ form.f_name.label(class='form-control-label font_karla2')}}
+                        {{ form.f_name(class='form-control rounded-pill') }}
+                    </div>
+                    <div class="col">
+                        {{ form.l_name.label(class='form-control-label font_karla2')}}
+                        {{ form.l_name(class='form-control rounded-pill') }}
+                    </div>
+                </div>
+                <div>
+                    {{ form.email.label(class="form-control-label font_karla2")}}
+                    {{ form.email(class='form-control rounded-pill') }}
+                </div>
+                <div>
+                    {{ form.password.label(class='form-control-label font_karla2')}}
+                    {{ form.password(class='form-control rounded-pill') }}
+                </div>
+                <div>
+                    {{ form.confirm_password.label(class='form-control-label font_karla2')}}
+                    {{ form.confirm_password(class='form-control rounded-pill') }}
+                </div>
+            </fieldset>
+            <div class="form-group pt-3">
+                {{ form.submit(class="button3") }}
+            </div>
+        </form>
+    </div>
+    <div>
+        <small class="text-white font_karla2">
+            Already Have An Account? <a class="text-white" href="{{ url_for('users.login') }}">Log In</a>
+        </small>
+    </div>
+</body>
+{% endblock %}

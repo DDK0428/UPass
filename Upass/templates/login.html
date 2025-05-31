@@ -1,0 +1,35 @@
+{% extends "Base_layout.html" %}
+{% block title %}Upass - Welcome Back!{% endblock %}
+
+{% block content%}
+<body class="body1">
+    <div class="center">
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group center">
+                <legend  class="home_image2"><a href="{{url_for('main.home')}}"><img src="{{url_for('static', filename='logo1.png')}}" alt="Image" height="106px" width="201px"></a> </legend>
+                <div>
+                    {{ form.email.label(class="form-control-label font_karla2")}}
+                    {{ form.email(class='form-control rounded-pill') }}
+                </div>
+                <div>
+                    {{ form.password.label(class='form-control-label font_karla2')}}
+                    {{ form.password(class='form-control rounded-pill') }}
+                </div>
+                <div>
+                    {{ form.otp.label(class='form-control-label font_karla2')}}
+                    {{ form.otp(class='form-control rounded-pill') }}
+                </div>
+            </fieldset>
+            <div class="form-group pt-3">
+                {{ form.submit(class="button3") }}
+            </div>
+        </form>
+    </div>
+    <div>
+        <small class="text-white font_karla2">
+            Need An Account? <a class="text-white" href="{{ url_for('users.register') }}">Register</a>
+        </small>
+    </div>
+</body>
+{% endblock %}

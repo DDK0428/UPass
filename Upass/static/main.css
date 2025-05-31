@@ -1,0 +1,150 @@
+html, body{
+    height: 100%;
+    background-image: linear-gradient(#051513,#159C96)
+}
+
+.body2{
+    height: auto;
+    background-image: linear-gradient(#051513,#159C96)
+}
+
+.button1 {
+    /* un-filled button*/
+    background-color: transparent;
+    color: white;
+    border: 2px solid #FFFFFF; /* Green */
+    border-radius: 18px;
+    padding: 5px 55px;
+    margin: 25px 14px;
+    text-align: center;
+    float: right;
+    font-family: 'Karla', sans-serif;
+}
+
+.button2{
+    /* filled button*/
+    background-color: #1DDEB6;
+    color: white;
+    border: 2px solid #FFFFFF; /* Green */
+    border-radius: 18px;
+    padding: 5px 55px;
+    margin: 25px 14px;
+    text-align: center;
+    float: right;
+    font-family: 'Karla', sans-serif;
+}
+
+.button3{
+    /* filled button*/
+    background-color: #1DDEB6;
+    color: white;
+    border: 2px solid #FFFFFF; /* Green */
+    border-radius: 18px;
+    padding: 5px 55px;
+    text-align: center;
+    font-family: 'Karla', sans-serif;
+    position: relative;
+}
+
+.button4{
+    background-color: #1DDEB6;
+    color: white;
+    border: 2px solid #FFFFFF; /* Green */
+    border-radius: 18px;
+    padding: 10px 10px;
+    text-align: center;
+    width: 200px !important;
+    font-family: 'Karla', sans-serif;
+}
+
+.button5{
+    /* filled button*/
+    background-color: #1DDEB6;
+    color: white;
+    border: 2px solid #FFFFFF; /* Green */
+    border-radius: 18px;
+    padding: 5px 15px;
+    text-align: center;
+    font-family: 'Karla', sans-serif;
+    position: relative;
+}
+
+.center {
+    margin: auto;
+    width: 50%;
+    padding: 20px;
+}
+
+.center1 {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+
+.body1 {
+    margin: auto;
+    text-align: center;
+}
+
+.br1{
+    border-radius: 34px
+}
+
+.home_image{
+    float: left;
+    margin: 25px 14px;
+}
+
+.home_image2{
+    margin-block-start: 50px;
+    writing-mode: horizontal-tb;
+    margin-bottom: 30px
+}
+
+.font_karla{
+    color: white;
+    font-family: 'Karla', sans-serif;
+}
+
+.font_karla2{
+    padding: 5px;
+    color: white;
+    font-family: 'Karla', sans-serif;
+    text-align: left;
+}
+
+.font_karla3{
+    padding: 5px;
+    color: black;
+    font-family: 'Karla', sans-serif;
+    text-align: left;
+}
+
+.image{
+    float: right;
+    position: absolute;
+    bottom: 45%;
+    right: 18%;
+    width: auto;
+}
+
+.image2{
+    float: left;
+    position: absolute;
+    bottom: 40%;
+    left: 10%;
+    width: auto;
+}
+
+.para{
+    float: left;
+    display: inline-block;
+    position: absolute;
+    bottom: 50%;
+    left: 10%;
+    width: auto;
+}
+
+.card1{
+    $card-bg: #1DDEB6;
+}

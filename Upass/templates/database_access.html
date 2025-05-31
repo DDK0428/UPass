@@ -1,0 +1,23 @@
+{% extends "Base_layout.html" %}
+{% block title %}Continue{% endblock %}
+{% block content%}
+<body class="body1">
+    <div class="center">
+    <a href="{{url_for('users.account')}}"><img src="{{url_for('static', filename='logo1.png')}}" alt="Image" height="106px" width="201px"></a>
+    </div>
+    <div class="card card1 text-center rounded-pill mt-5 col-4 center">
+        <form class="align-middle" method="POST" action="">
+        {{ form.hidden_tag() }}
+        <div class="row align-middle">
+            <div class="card-body col-2">
+                <p class="font_karla2 text-black text-center">Please enter your master password to continue</p>
+                {{ form.master_password(class='form-control rounded-pill text-center', placeholder="Master Password") }}
+                <p></p>
+                {{ form.submit(class="button3") }}
+            </div>
+
+        </div>
+        </form>
+    </div>
+</body>
+{% endblock %}
